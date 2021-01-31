@@ -1,0 +1,27 @@
+{
+    "name": "thn/api-http-client",
+    "description": "Tech Haven Network - API HTTP Client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pete Hatton",
+            "email": "pete@monolight.org"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "symfony/http-client": "^5.2"
+    },
+    "autoload":
+    {
+        "psr-4":
+        {
+            "THN\\SDK\\Api": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
