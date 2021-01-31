@@ -16,7 +16,7 @@
     {
         "psr-4":
         {
-            "THN\\SDK\\Api": "src/"
+            "THN\\SDK\\Api\\": "src/"
         }
     },
     "extra": {
