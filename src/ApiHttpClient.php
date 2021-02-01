@@ -34,8 +34,8 @@ class ApiHttpClient implements HttpClientInterface, UserAgentInterface
 
         $this->userAgentFields = [];
 
-        $this->addAgentField('Client', get_class($this->httpClient));
-        $this->addAgentField('Version', Versions::getVersion('symfony/http-client'));
+        $this->setAgentField('Client', get_class($this->httpClient));
+        $this->setAgentField('Version', Versions::getVersion('symfony/http-client'));
     }
 
     public function request(string $method, string $url, array $options = []): ResponseInterface
@@ -57,7 +57,7 @@ class ApiHttpClient implements HttpClientInterface, UserAgentInterface
         $options['max_redirects'] = 0;
     }
 
-    public function addAgentField(string $name, string $value): void
+    public function setAgentField(string $name, string $value): void
     {
         $this->userAgentFields[$name] = $value;
     }
