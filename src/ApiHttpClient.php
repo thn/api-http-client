@@ -49,7 +49,7 @@ class ApiHttpClient implements HttpClientInterface, UserAgentInterface
         return $this->httpClient->stream($responses, $timeout);
     }
 
-    private function updateOptions(array $options): void
+    private function updateOptions(array &$options): void
     {
         $options['headers']['X-THN-API-Key'] = $this->apiKey;
         $options['headers']['X-THN-API-Secret'] = $this->apiSecret;
