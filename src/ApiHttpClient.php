@@ -52,7 +52,7 @@ class ApiHttpClient implements HttpClientInterface, UserAgentInterface
     private function updateOptions(array $options): void
     {
         $options['headers']['X-THN-API-Key'] = $this->apiKey;
-        $options['headers']['X-THN-API-Secret'] = $this->apiKey;
+        $options['headers']['X-THN-API-Secret'] = $this->apiSecret;
         $options['headers']['User-Agent'] = $this->getAgentString();
         $options['max_redirects'] = 0;
     }
